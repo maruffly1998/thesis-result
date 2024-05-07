@@ -4,6 +4,8 @@ import streamlit as st
 import cv2
 from pytube import YouTube
 import os
+import webbrowser
+
 from tempfile import NamedTemporaryFile
 from streamlit_webrtc import (
     VideoTransformerBase,
@@ -204,4 +206,4 @@ def vid_help():
 
     yt_url = "https://youtu.be/qN_ZyDgk3GU?si=QSVJw67gKpi2msyj"
     yt = YouTube(yt_url)
-    st.video(yt.streams.first().url)
+    st.video(yt_url)
