@@ -3,6 +3,7 @@ from ultralytics import YOLO
 import streamlit as st
 import cv2
 from pytube import YouTube
+import os
 from tempfile import NamedTemporaryFile
 from streamlit_webrtc import (
     VideoTransformerBase,
@@ -201,6 +202,6 @@ def vid_help():
     """
     st.markdown(html_temp_about1, unsafe_allow_html=True)
 
-    yt_url = 'https://youtu.be/qN_ZyDgk3GU'
+    yt_url = os.environ["YOUTUBE_LINK "]
     yt = YouTube(yt_url)
     st.video(yt.streams.first().url)
