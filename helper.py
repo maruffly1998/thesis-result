@@ -202,6 +202,6 @@ def vid_help():
     """
     st.markdown(html_temp_about1, unsafe_allow_html=True)
 
-    yt_url = os.environ["YOUTUBE_LINK"]
+    yt_url = "https://youtu.be/qN_ZyDgk3GU?si=QSVJw67gKpi2msyj"
     yt = YouTube(yt_url)
     st.video(yt.streams.first().url)
